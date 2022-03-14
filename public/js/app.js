@@ -12,7 +12,7 @@ const fetchData = async (url) => {
     console.log(data);
 
     const inHtml = `<h5>${data.place}</h5>
-<h2>${data.description}.</h2>
+<h2>${data.description}</h2>
 <img src="http://openweathermap.org/img/wn/${data.icon}@2x.png" alt="${data.icon}" class="w-icon" />
 ${data.forecast}
 `;
@@ -22,7 +22,7 @@ ${data.forecast}
     console.log(error);
     errorEl.innerHTML = `<p>${error}</p>`;
     infoEl.innerHTML = '';
-    errorEl.scrollIntoView({ behavior: 'smooth' });
+    errorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 };
 

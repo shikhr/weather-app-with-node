@@ -54,9 +54,9 @@ const app = async (address, unit = 'c', callback, error_fn) => {
         wind_speed: data.wind.speed,
         place: `${data.name}, ${data.sys.country}`,
       };
-      const forecast = `<p>It is currently ${data1.temp} degree ${currentUnit.name}.</p>
-<p>It feels like ${data1.feels_like} degree ${currentUnit.name} outside.</p>
-<p>The humidity is ${data1.humidity}%.</p>`;
+      const forecast = `<p>It is currently ${data1.temp} degree ${currentUnit.name}</p>
+<p>It feels like ${data1.feels_like} degree ${currentUnit.name} outside</p>
+<p>The humidity is ${data1.humidity}%</p>`;
       callback({ ...data1, forecast });
     },
     (err) => {
