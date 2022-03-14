@@ -1,0 +1,40 @@
+<html lang='en'>
+
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>My App</title>
+    <link rel='stylesheet' href='/css/style.css' />
+    <link rel="icon" href="/img/weather.png">
+    <script defer src='/js/app.js'></script>
+  </head>
+
+  <body>
+    {{>header}}
+
+    <main>
+      <form class="weather-form">
+          <input class="address" name="address" placeholder="Location" type="text" required>
+          <div class="unit-box">
+            <div class="unit">
+              <input type="radio" checked name="unit" id="c" value="c">
+              <label for="c">Celsius</label>
+            </div>
+            <div class="unit">
+              <input type="radio" name="unit" id="f" value="f">
+              <label for="f">Fahrenheit </label>
+            </div>
+          </div>
+          <button type="submit">SEARCH</button>
+      </form>
+      <p id="error"></p>
+      <p id="weather-info">
+      </p>
+
+    </main>
+
+    {{>footer}}
+  </body>
+
+</html>
