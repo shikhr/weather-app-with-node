@@ -29,6 +29,6 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   const unit = unitEl.value;
   const location = encodeURIComponent(locationEl.value.trim());
-  const genURL = `http://localhost:3000/weather?address=${location}&unit=${unit}`;
+  const genURL = `/weather?address=${location}&unit=${unit}`;
   fetchData(genURL);
 });
