@@ -13,13 +13,16 @@ const fetchData = async (url) => {
 
     const inHtml = `<h5>${data.place}</h5>
 <h2>${data.description}.</h2>
-<p>${data.forecast}</p>`;
-
+<img src="http://openweathermap.org/img/wn/${data.icon}@2x.png" alt="${data.icon}" class="w-icon" />
+${data.forecast}
+`;
     infoEl.innerHTML = inHtml;
+    infoEl.scrollIntoView({ behavior: 'smooth' });
   } catch (error) {
     console.log(error);
     errorEl.innerHTML = `<p>${error}</p>`;
     infoEl.innerHTML = '';
+    errorEl.scrollIntoView({ behavior: 'smooth' });
   }
 };
 
