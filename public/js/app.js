@@ -1,5 +1,3 @@
-console.log('Client side js file is loaded');
-
 const form = document.querySelector('.weather-form');
 const locationEl = form.elements['address'];
 const unitEl = form.elements['unit'];
