@@ -1,3 +1,4 @@
+import { getIcon } from './util.js';
 const form = document.querySelector('.weather-form');
 const locationEl = form.elements['address'];
 const unitEl = form.elements['unit'];
@@ -10,10 +11,10 @@ const fetchData = async (url) => {
     const data = await response.json();
     if (data.error) throw new Error(data.error);
     console.log(data);
-
+    const codeClass = getIcon(data.id);
     const inHtml = `<h5>${data.place}</h5>
 <h2>${data.description}</h2>
-<img src="http://openweathermap.org/img/wn/${data.icon}@2x.png" alt="${data.icon}" class="w-icon" />
+<i class="${codeClass} mi-4x"></i>
 ${data.forecast}
 `;
     infoEl.innerHTML = inHtml;

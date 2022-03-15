@@ -1,15 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  /* --bg-pri: #eeedde;
+  --col-pri-1: #141e27;
+  --col-pri-2: #203239; */
+  --bg-pri: #2c434d;
+  --col-pri-1: #eeedde;
+  --col-pri-2: #eeedde;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  background: silver;
+  background: var(--bg-pri);
   height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: 'Space Mono', monospace;
+  color: var(--col-pri-2);
 }
 main {
   display: flex;
@@ -23,9 +34,10 @@ main {
 }
 
 h1 {
-  /* border: 1px solid black; */
   padding: 10px;
   text-align: center;
+  margin: 0.5rem;
+  color: var(--col-pri-2);
 }
 
 header {
@@ -43,18 +55,18 @@ nav {
 
 a {
   text-decoration: none;
-  border: 1px solid black;
+  border: 1px solid var(--col-pri-1);
   padding: 0.5rem;
   text-transform: uppercase;
-  color: black;
+  color: var(--col-pri-1);
   font-weight: 600;
   transition: all 300ms ease;
 }
 a:hover {
   text-decoration: none;
   text-transform: uppercase;
-  color: silver;
-  background: #000;
+  color: var(--bg-pri);
+  background: var(--col-pri-1);
 }
 
 .myimg {
@@ -71,10 +83,9 @@ a:hover {
   object-fit: cover;
   transform: translate(0%, -2%) scale(1.1);
 }
-h1,
 p {
   margin: 0.5rem;
-  color: #222;
+  color: var(--col-pri-2);
 }
 
 .heading-404 {
@@ -85,13 +96,13 @@ p {
   margin-bottom: 2rem;
 }
 footer {
-  background: #444;
+  background: var(--col-pri-2);
   width: 100%;
   margin-top: auto;
   text-align: center;
 }
 footer p {
-  color: silver;
+  color: var(--bg-pri);
   margin: 0.25rem;
 }
 
@@ -106,16 +117,20 @@ footer p {
 }
 .weather-form .address {
   background-color: transparent;
-  border: 1px solid black;
+  border: 1px solid var(--col-pri-1);
   height: 2rem;
   padding: 0.5rem;
   outline: none;
   font-size: 0.9rem;
   transition: all 100ms ease;
+  color: var(--col-pri-2);
 }
 .weather-form .address:focus {
   padding: 0.25rem 0.25rem;
   font-size: 1rem;
+}
+.weather-form .address::placeholder {
+  color: var(--col-pri-2);
 }
 .weather-form .unit-box {
   display: flex;
@@ -134,42 +149,41 @@ footer p {
 .unit-box .unit label {
   display: block;
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid var(--col-pri-1);
   padding: 0.25rem 0.5rem;
   text-transform: uppercase;
-  color: black;
+  color: var(--col-pri-1);
   font-weight: 600;
   transition: all 300ms ease;
 }
 .unit-box .unit label:hover {
   text-decoration: none;
   text-transform: uppercase;
-  color: silver;
-  background: #000;
+  color: var(--bg-pri);
+  background: var(--col-pri-1);
 }
 .unit-box .unit input:checked + label {
   text-decoration: none;
   text-transform: uppercase;
-  color: silver;
-  background: #000;
+  color: var(--bg-pri);
+  background: var(--col-pri-1);
 }
 
 .weather-form button {
   text-decoration: none;
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   text-transform: uppercase;
-  color: silver;
-  background: #000;
+  color: var(--bg-pri);
+  background: var(--col-pri-1);
   font-weight: 600;
-  border: 1px solid black;
+  border: 1px solid var(--col-pri-1);
   transition: all 300ms ease;
 }
 .weather-form button:hover {
   background: transparent;
-  padding: 0.25rem 0.5rem;
-  border: 1px solid black;
+  border: 1px solid var(--col-pri-1);
   text-transform: uppercase;
-  color: black;
+  color: var(--col-pri-1);
 }
 
 #error {
@@ -183,6 +197,11 @@ footer p {
 #weather-info {
   text-align: center;
   margin-bottom: 2rem;
+}
+.mi-4x {
+  font-size: 4rem;
+  padding: 0.5rem;
+  margin: 1rem;
 }
 @media all and (max-width: 680px) {
   header {
