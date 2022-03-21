@@ -199,8 +199,7 @@ footer p {
   margin-bottom: 2rem;
 }
 .mi-4x {
-  font-size: 4rem;
-  padding: 0.5rem;
+  font-size: 6rem;
   margin: 1rem;
 }
 @media all and (max-width: 680px) {
